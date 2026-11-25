@@ -1,0 +1,20 @@
+{
+  "name": "mtb.com.np",
+  "short_name": "mtb",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b1b1f",
+  "theme_color": "#1b1b1f",
+  "icons": [
+    {
+      "src": "assets/imgs/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/imgs/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

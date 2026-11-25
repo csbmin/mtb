@@ -1,131 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free resources" />
-  <title>Welcome-mtb</title>
-  
-  <!-- Favicon -->
+  <meta name="description" content="Free tools, Excel add-ins, and utilities on mtb.com.np." />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'self'; manifest-src 'self'; object-src 'none';" />
+  <title>Resources — mtb.com.np</title>
+  <link rel="canonical" href="https://mtb.com.np/" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/apple-touch-icon.png" />
-  <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css" />
+  <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="assets/css/mtb.css" />
+  <script src="assets/js/theme.js"></script>
+  <script defer src="resources.js"></script>
+  <script defer src="assets/js/mtb.js"></script>
 </head>
 <body>
-
-  <!-- ── NAV ─────────────────────────────────────────────────────── -->
-  <nav class="top-nav" id="top-nav">
+  <header class="vp-nav">
     <div class="nav-left">
-      <a href="https://mtb.com.np" class="nav-logo">
-        <img src="assets/imgs/logo.png" alt="mtb logo" class="nav-logo-img">
-      mtb
+      <button type="button" class="nav-menu-btn" id="nav-menu-btn" aria-label="Open categories" aria-expanded="false" aria-controls="sidebar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+
+      <a href="./" class="nav-logo">
+        <img src="assets/imgs/logo.png" alt="mtb logo" class="nav-logo-img" width="45" height="20" />
+        <span>mtb.com.np</span>
       </a>
 
-      <!-- Search trigger -->
-      <button class="search-trigger" id="search-trigger" aria-label="Search (Ctrl+K)">
-        <i class="ti-search"></i>
-        <span class="search-trigger-text">Search…</span>
-        <kbd>Ctrl K</kbd>
+      <button type="button" class="search-trigger" id="search-trigger" aria-label="Search resources (Ctrl+K)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span class="search-trigger-text">Search</span>
+        <kbd class="kbd">Ctrl K</kbd>
       </button>
     </div>
 
-    <div class="nav-right">
-      <a href="https://mtb.com.np" class="nav-link">Home</a>
-      <a href="https://mtb.com.np" class="nav-link active">Resources</a>
-      <a href="mailto:info@mtb.com.np" class="nav-link">Contact</a>
-
-      <div class="nav-divider"></div>
-
-      <!-- Icon links -->
-      <a href="https://github.com/mtbcomnp" class="nav-icon" target="_blank" rel="noopener" title="GitHub">
-        <!-- inline SVG for GitHub-->
+    <nav class="nav-right" aria-label="Primary">
+      <a href="./" class="nav-link active">Resources</a>
+      <div class="nav-divider" aria-hidden="true"></div>
+      <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch theme">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <span class="theme-label" id="theme-label">Dark</span>
+      </button>
+      <a href="https://github.com/mtbcomnp" class="nav-icon" data-site-link="github" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
         </svg>
       </a>
-      <a href="mailto:info@mtb.com.np" class="nav-icon" title="Email">
-        <i class="ti-email"></i>
+      <a href="mailto:info@mtb.com.np" class="nav-icon" data-site-link="email" title="Email" aria-label="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
       </a>
-    </div>
+    </nav>
+  </header>
 
-    <!-- Mobile hamburger -->
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
 
-  <!-- Mobile menu -->
-  <div class="nav-mobile" id="nav-mobile">
-    <a href="https://mtb.com.np" class="nav-link">Home</a>
-    <a href="downloads.html" class="nav-link active">Resources</a>
-    <a href="mailto:info@mtb.com.np" class="nav-link">Contact</a>
-    <div class="nav-mobile-icons">
-      <a href="https://github.com/mtbcomnp" class="nav-icon" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        GitHub
-      </a>
-      <a href="mailto:info@mtb.com.np" class="nav-icon"><i class="ti-email"></i> Email</a>
-    </div>
+  <div class="vp-shell">
+    <aside class="vp-sidebar" id="sidebar" aria-label="Categories">
+      <div class="sidebar-mobile-head">
+        <span class="sidebar-mobile-title">Categories</span>
+        <button type="button" class="sidebar-close" id="sidebar-close" aria-label="Close categories">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-heading">Browse</div>
+        <div class="sidebar-list" id="sidebar-browse"></div>
+      </div>
+
+      <div class="sidebar-group">
+        <div class="sidebar-heading">Categories</div>
+        <div class="sidebar-list" id="sidebar-categories"></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="https://github.com/mtbcomnp" class="sidebar-ext" data-site-link="github" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+        <a href="mailto:info@mtb.com.np" class="sidebar-ext" data-site-link="email">
+          <span>Contact</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="vp-main">
+      <div class="content-wrap">
+        <div class="page-header">
+          <h1 class="page-title" id="page-title">Resources</h1>
+          <p class="page-sub" id="page-sub">Tools, add-ins, and downloads.</p>
+        </div>
+
+        <div class="mobile-pills" id="mobile-pills" aria-label="Category filter"></div>
+
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <span class="results-summary" id="results-summary"></span>
+            <button type="button" class="link-btn" id="reset-filter-btn" hidden>Reset</button>
+          </div>
+
+          <div class="toolbar-right">
+            <select id="sort-select" class="sort-select" aria-label="Sort resources">
+              <option value="featured">Featured</option>
+              <option value="newest">Newest</option>
+              <option value="oldest">Oldest</option>
+              <option value="name">A–Z</option>
+            </select>
+
+            <div class="view-toggle" role="group" aria-label="Layout view">
+              <button type="button" class="view-btn active" id="view-grid-btn" title="Grid view" aria-label="Grid view" aria-pressed="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </button>
+              <button type="button" class="view-btn" id="view-list-btn" title="List view" aria-label="List view" aria-pressed="false">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="8" y1="6" x2="21" y2="6" />
+                  <line x1="8" y1="12" x2="21" y2="12" />
+                  <line x1="8" y1="18" x2="21" y2="18" />
+                  <line x1="3" y1="6" x2="3.01" y2="6" />
+                  <line x1="3" y1="12" x2="3.01" y2="12" />
+                  <line x1="3" y1="18" x2="3.01" y2="18" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="items-container view-grid" id="items-container"></div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <p>No items match this filter. <button type="button" class="link-btn" id="empty-reset-btn">Show all</button></p>
+        </div>
+      </div>
+
+      <footer class="site-footer">
+        <span>© <span id="footer-year"></span> <a href="https://mtb.com.np" id="footer-name">mtb.com.np</a></span>
+      </footer>
+    </main>
   </div>
 
-  <!-- ── SEARCH OVERLAY ───────────────────────────────────────────── -->
-  <div class="search-overlay" id="search-overlay">
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search resources" aria-hidden="true">
     <div class="search-modal">
-      <div class="search-modal-inner">
-        <i class="ti-search search-modal-icon"></i>
-        <input type="text" id="search-modal-input" class="search-modal-input" placeholder="Search resources…" autocomplete="off" />
-        <button class="search-modal-close" id="search-close" aria-label="Close"><kbd>Esc</kbd></button>
+      <div class="search-modal-head">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="search" id="search-input" class="search-input" placeholder="Search tools, formats, tags…" autocomplete="off" spellcheck="false" />
+        <button type="button" class="search-close" id="search-close" aria-label="Close search">
+          <kbd class="kbd">Esc</kbd>
+        </button>
       </div>
       <div class="search-results" id="search-results"></div>
     </div>
   </div>
-
-  <!-- ── PAGE HEADER ─────────────────────────────────────────────── -->
-  <header class="page-header">
-    <div class="container">
-      <h1 class="page-title"> Resources </h1>
-      <p class="page-sub"> </p>
-    </div>
-  </header>
-
-  <!-- ── MAIN ────────────────────────────────────────────────────── -->
-  <main class="main-content">
-    <div class="container">
-
-      <!-- Filter pills -->
-      <div class="filter-row">
-        <div class="filter-pills" id="filter-pills">
-          <!-- injected by JS -->
-        </div>
-        <select id="sort-select" class="sort-select">
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="name">A–Z</option>
-        </select>
-      </div>
-
-      <!-- Results count -->
-      <p class="results-count" id="results-count"></p>
-
-      <!-- Card grid -->
-      <div class="card-grid" id="card-grid"></div>
-
-      <!-- Empty state -->
-      <div class="empty-state" id="empty-state" hidden>
-        <p>Nothing matches. <button class="link-btn" id="reset-btn">Clear filters</button></p>
-      </div>
-  </main>
-  
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-copy">© <span id="footer-year"></span> <a href="https://mtb.com.np">mtb.com.np</a> Made with &#10084;&#65039;</p>
-    </div>
-  </footer>
-
-  <script src="assets/js/mtb.js"></script>
 </body>
 </html>

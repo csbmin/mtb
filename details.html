@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resource details on mtb.com.np." />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'none'; connect-src 'none'; form-action 'none'; base-uri 'self'; manifest-src 'self'; object-src 'none';" />
+  <title>Details — mtb.com.np</title>
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/mtb.css" />
+  <script src="assets/js/theme.js"></script>
+  <script defer src="resources.js"></script>
+  <script defer src="assets/js/mtb.js"></script>
+</head>
+<body>
+  <header class="vp-nav">
+    <div class="nav-left">
+      <a href="./" class="nav-logo">
+        <img src="assets/imgs/logo.png" alt="mtb logo" class="nav-logo-img" width="45" height="20" />
+        <span>mtb.com.np</span>
+      </a>
+
+      <button type="button" class="search-trigger" id="search-trigger" aria-label="Search resources (Ctrl+K)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span class="search-trigger-text">Search</span>
+        <kbd class="kbd">Ctrl K</kbd>
+      </button>
+    </div>
+
+    <nav class="nav-right" aria-label="Primary">
+      <a href="./" class="nav-link">Resources</a>
+      <div class="nav-divider" aria-hidden="true"></div>
+      <button type="button" class="theme-btn" id="theme-toggle" aria-label="Switch theme">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+        <span class="theme-label" id="theme-label">Dark</span>
+      </button>
+      <a href="https://github.com/mtbcomnp" class="nav-icon" data-site-link="github" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.72-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+        </svg>
+      </a>
+      <a href="mailto:info@mtb.com.np" class="nav-icon" data-site-link="email" title="Email" aria-label="Email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <main class="detail-page">
+    <div class="detail-wrap">
+      <div class="detail-crumb">
+        <a href="./" class="crumb-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          <span>All resources</span>
+        </a>
+      </div>
+
+      <article class="detail-card" id="detail-root"></article>
+
+      <div class="empty-state" id="detail-missing" hidden>
+        <p>Item not found. <a href="./">Back to resources</a></p>
+      </div>
+    </div>
+
+    <footer class="site-footer detail-footer">
+      <span>© <span id="footer-year"></span> <a href="https://mtb.com.np" id="footer-name">mtb.com.np</a></span>
+    </footer>
+  </main>
+
+  <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search resources" aria-hidden="true">
+    <div class="search-modal">
+      <div class="search-modal-head">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="search" id="search-input" class="search-input" placeholder="Search tools, formats, tags…" autocomplete="off" spellcheck="false" />
+        <button type="button" class="search-close" id="search-close" aria-label="Close search">
+          <kbd class="kbd">Esc</kbd>
+        </button>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+</body>
+</html>
